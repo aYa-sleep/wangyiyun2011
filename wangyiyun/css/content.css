@@ -1,0 +1,351 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/*.................main......................*/
+.main{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}
+.main .main_con{
+    width: 1100px;
+    height: 50px;
+    background-color: rgb(54, 54, 54);
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    /* justify-content: center; */
+    align-items: center;
+}
+.main_con span{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.main_con a{
+    text-decoration: none;
+    color:white;
+}
+
+
+/*................... 内容区..................... */
+.content{
+    width: 100%;
+    height: 580px;
+    background-color: white;
+}
+.content .content_con{
+    width: 1100px;
+    height: 580px;
+    background-color: rgb(243, 237, 227);
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/* 内容左边导航 */
+.content .content_con .left{
+    width: 200px;
+    height: 580px;
+    background-color: rgb(143, 143, 146);
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: white;
+}
+.content_con .left img{
+    margin-top: 10px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.content .content_con .left li{
+    /* margin-bottom: 30px; */
+    width: 100%;
+    height: 50px;
+    /* background-color: wheat; */
+    text-align: center;
+    border-bottom: 1px solid rgb(253, 250, 250);
+    line-height: 50px;
+    cursor: pointer;
+
+}
+.content_con .left li:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+ }
+.content_con .left .focus{
+    color: black;
+    background-color: rgb(247, 242, 242);
+    font-weight: bold;
+}
+
+
+/* .................内容区右边 ...................*/
+ .content_con .right{
+     width: 900px;
+     height: 580px;
+     /* background-color: rgb(206, 174, 236); */
+ }
+.content_con section{
+    padding: 20px 20px;
+    /* background-color: rgb(241, 177, 177); */
+    line-height: 24px;
+    width: 860px;
+    height: 540px;
+    display: none;
+}
+.content_con .show{
+    display: block;
+}
+
+/* ................右边第一个section............. */
+.content_con .right #first h2{
+    background-color: white;
+    padding: 10px 10px;
+}
+/* .content_con .right #first button{
+    border-radius: 5px;
+    text-align: center;
+    padding: 4px 20px;
+    float: right;
+    font-size: 18px;
+    font-weight: normal;
+    background-color: rgb(55, 55, 56);
+    color: rgb(5, 5, 5);
+} */
+.content_con .right #first table{
+
+    padding: 10px;
+    background-color: white;
+    width: 860px;
+    height: 260px;
+}
+.content_con .right #first td{
+    /* background-color: rgb(146, 179, 241); */
+    border-bottom: 9px solid white;
+}
+.content_con .right #first tr{
+    padding: 10px 0;
+    background-color: rgb(232, 235, 241);
+}
+.content_con .right #first .qq{
+    background-color: white;
+    width: 180px;
+}
+.content_con .right #first img{
+    margin-left: 10px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+/* .content_con .right #first .qq p{
+    margin-right: 30px;
+    margin-top: 10px;
+} */
+
+
+
+
+/* .................右边第二个section .............*/
+.content_con .right #second h2{
+    background-color: white;
+    padding: 10px 10px;
+}
+.content_con .right #second button{
+    border-radius: 5px;
+    text-align: center;
+    padding: 0px 10px;
+    float: right;
+    font-size: 18px;
+    font-weight: normal;
+    background-color: rgb(55, 55, 56);
+    color: white;
+}
+.content_con .right #second table{
+
+    padding: 10px;
+    background-color: white;
+    width: 860px;
+    height: 260px;
+}
+.content_con .right #second td{
+    /* background-color: rgb(146, 179, 241); */
+    border-bottom: 9px solid white;
+}
+.content_con .right #second tr{
+    padding: 10px 0;
+    background-color: rgb(232, 235, 241);
+}
+.content_con .right #second .qq{
+    background-color: white;
+    width: 180px;
+}
+.content_con .right #second img{
+    margin-left: 10px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+.content_con .right #second .qq button{
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+/* ................修改密码 .............*/
+/* ...............右边第三个section .........*/
+.content_con #three #wrap{
+    /* width: 400px; */
+    height: 300px;
+    width: 100%;
+    /* border: 1px solid black; */
+    box-shadow: 0px 0px 2px rgb(99, 94, 94);
+}
+.content_con #three #wrap h2{
+    /* width: 100%; */
+    color: white;
+    text-align: center;
+    background-color: rgb(104, 103, 101);
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.content_con #three #wrap .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    /* background-color: blueviolet; */
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+.content_con #three #wrap input{
+    /* outline: none; */
+    border: none;
+    border-radius: 5px;
+    margin-left: 12px;
+    width: 300px;
+    height: 40px;
+}
+.content_con #three #wrap button{
+    width: 300px;
+    height: 40px;
+    margin-left: 92px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(126, 125, 125);
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ...................右边第四个section............ */
+.content_con #four ul{
+    overflow: hidden;
+    background-color: #666666;
+}
+.content_con #four li{
+    float: left;
+    padding: 15px 20px;
+    border-right: 1px solid #f0fcff;
+    border-bottom: 1px solid #f0fcff;
+    cursor: pointer;
+}
+.content_con #four .hh{
+    background-color: #fff;
+    font-weight: bold;
+}
+.content_con #four div{
+    padding: 5px 7px;
+    background-color: #fff;
+    line-height: 24px;
+    width: 846px;
+    height: 480px;
+    display: none;
+}
+.content_con #four .ssow{
+    display: block;
+}
+.content_con #four .huowu{
+    width: 843px;
+    height: 475px;
+    /* background-color: rgb(51, 97, 248); */
+    /* border: 1px solid black; */
+}
+.content_con #four .huowu img{
+    width: 843px;
+    height: 475px;
+}
+
+
+/*................修改信息...................*/
+#popup{
+    width: 300px;
+    height: 200px;
+    padding:30px 10px;
+    position:fixed;
+    background-color:#fff;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius:10px;
+}
+#popup p{
+    padding: 10px;
+}
+#popup input{
+    width: 160px;
+    height: 24px;
+    float: right;
+    border-radius: 5px;
+    /* outline: none; */
+}
+#popup .bb{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#popup button{
+    margin-top:20px ;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+/*..............遮罩层............*/
+.mask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(80, 80, 80,0.5);
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

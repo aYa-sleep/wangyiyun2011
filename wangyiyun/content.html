@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../wangyiyun2011/css/content.css">
+</head>
+<body>
+
+    <!-- 头部 -->
+    <div class="main">
+        <div class="main_con">
+            <h2>个人中心</h2>
+            <span><a href="http://192.168.43.232/wangyiyun2011/shouye.html">首页></a></span>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="content">
+        
+        <div class="content_con">
+            <ul class="left">
+                <li>
+                    <img src="img/luobotu/luobo1.jpg" alt="">
+                    <span>您好！我的用户</span>
+                </li>
+                <li class="focus">个人资料</li>
+                <li>修改密码</li>
+                <li>我的订单</li>
+            </ul>
+            <div class="right">
+                    <section id="first">
+                            <h2>我的资料
+                            </h2>
+                            <hr>
+                                <table cellspacing="0" cellpadding="0" >
+                                    <tr>
+                                        <td>云音乐账号：</td>
+                                        <td>192037193ueid</td>
+                                        <td rowspan="4" class="qq">
+                                            <img src="img/luobotu/luobo1.jpg" alt="">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>手机号：</td>
+                                        <td>192037193322</td>
+                                        <!-- <td>1231231</td> -->
+                                    </tr>
+                                    <tr>
+                                        <td>音乐偏好：</td>
+                                        <td>
+                                            <span>民谣</span>
+                                            <span>摇滚</span>
+                                            <span>轻音乐</span>
+                                        </td>
+                                        <!-- <td>123123</td> -->
+                                    </tr>
+                                    <tr>
+                                        <td>音乐等级：</td>
+                                        <td>18v</td>
+                                        <!-- <td>132312312</td> -->
+                                    </tr>
+                            </table>
+                        </section>
+                    <section id="second"  class="show">
+                        <h2>我的资料
+                            <span id="id"></span>
+                            <button>修改</button>
+                        </h2>
+                        <hr>
+                            <table cellspacing="0" cellpadding="0" >
+                                <tr>
+                                    <td>云音乐账号：</td>
+                                    <td id="name"></td>
+                                    <td rowspan="4" class="qq">
+                                        <img src="img/luobotu/luobo1.jpg" alt="">
+                                       <button>修改头像</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>手机号：</td>
+                                    <td id="phone"></td>
+                                    <!-- <td>1231231</td> -->
+                                </tr>
+                                <tr>
+                                    <td>音乐偏好：</td>
+                                    <td id="like"></td>
+                                    <!-- <td>123123</td> -->
+                                </tr>
+                                <tr>
+                                    <td>音乐等级：</td>
+                                    <td>18v</td>
+                                    <!-- <td>132312312</td> -->
+                                </tr>
+                        </table>
+                    </section>
+                    <section id="three">
+                        <div id="wrap">
+                            <h2>修改密码</h2>
+                            <div class="box">
+                                <label for="ipt1">原&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+                                <input type="text" id="ipt1">
+                            </div>
+                            <div class="box">
+                                <label for="ipt2">新&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+                                <input type="password" id="ipt2">
+                            </div>
+                            <div class="box">
+                                <label for="ipt3">确认新密码:</label>
+                                <input type="password" id="ipt3">
+                            </div>
+                            <div class="box">
+                                <button>修改密码</button>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <section id="four">
+                        <ul class="dingdan">
+                            <li class="hh">已收货</li>
+                            <li>已发货</li>
+                            <li>退货/换货</li>
+                            <li>我的评价</li>
+                        </ul>
+                        <div class="ssow">
+                            <p class="huowu">
+                                <img src="img/shiliangtu/t0154543537316395c9.jpg" alt="">
+                            </p>
+                        </div>
+                        <div>
+                                <p class="huowu">
+                                    <img src="img/shiliangtu/t0154543537316395c9.jpg" alt="">
+                                </p>
+                            </div>
+                            <div>
+                                    <p class="huowu">
+                                        <img src="img/shiliangtu/t0154543537316395c9.jpg" alt="">
+                                    </p>
+                                </div>
+                                <div>
+                                        <p class="huowu">
+                                            <img src="img/shiliangtu/t0154543537316395c9.jpg" alt="">
+                                        </p>
+                                    </div>
+                    </section>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 遮罩层 -->
+    <div class="mask">
+    <!-- 修改信息 -->
+    <div id="popup">
+        <p>
+            <label for="id">id：</label>
+            <input type="text" id="id">
+        </p>
+        <p>
+            <label for="name">云音乐账号：</label>
+            <input type="text" id="name">
+        </p>
+        <p>
+            <label>手机号:</label>
+            <input type="text" id="phone">
+        </p>
+        <p>
+            <label for="like"">音乐偏好：</label>
+            <input type="text" id="like">
+        </p>
+        <div class="bb">
+            <button id="confirm" style="float:right;margin-right:20px;">确认</button>
+            <button id="cancel" style="float:right;">取消</button>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="../wangyiyun2011/js/jquery.min.js"></script>
+<script>
+        var liList = document.querySelectorAll(".left li");
+        console.log(liList)
+        var sectionList =document.querySelectorAll(".right section");
+        console.log(sectionList)
+        for(var i = 0;i<liList.length;i++){
+            liList[i].setAttribute("dawei-index",i);//自动生产自定义属性及值,类似于轮播图
+                liList[i].onclick=function(){
+                for(var j = 0;j<liList.length;j++){
+                    liList[j].className="";
+                    sectionList[j].className="";
+                }
+                    this.className="focus";
+                    sectionList[this.getAttribute("dawei-index")].className="show";
+                }    
+        }
+
+        // console.log($("#second #name").html())
+        // console.log($("#second #phone").html())
+        // console.log($("#second #like").html())
+        //修改信息
+        let popup = document.getElementById("popup")
+        let btn =document.querySelector(".content_con .right #second button");
+        let cancel=document.getElementById("cancel");
+        let mask=document.querySelector(".mask")
+        console.log(mask)
+        // console.log(popup)
+        // console.log(btn)
+        
+
+
+        var List = document.querySelectorAll(".right #four li");
+        console.log(List)
+        var divList =document.querySelectorAll(".right #four div");
+        console.log(divList)
+        console.log(List)
+        for(var i = 0;i<List.length;i++){
+            List[i].setAttribute("huowu-index",i);//自动生产自定义属性及值,类似于轮播图
+                List[i].onclick=function(){
+                for(var j = 0;j<List.length;j++){
+                    List[j].className="";
+                    divList[j].className="";
+                }
+                    this.className="hh";
+                    divList[this.getAttribute("huowu-index")].className="ssow";
+                }    
+        }
+
+
+
+
+
+
+
+
+
+
+
+        //获取信息
+        $.ajax({
+        url:"http://192.168.43.232:8080/xinxi",
+        success(data){
+            console.log(data)
+            data.forEach(item=>{
+                $("#second #id").html(item.id);
+                $("#second #name").html(item.name);
+                $("#second #phone").html(item.phone);
+                $("#second #like").html(item.hoby);
+            })
+            // $(".content_bottom ul").html(addStr);
+        }
+    })
+
+    btn.onclick=function(){
+            mask.style.display="block";
+            $("#popup #id").val($("#second h2 #id").html())
+            $("#popup #name").val($("#second #name").html())
+            $("#popup #phone").val($("#second #phone").html())
+            $("#popup #like").val($("#second #like").html())
+        
+
+        $("#confirm").click(function(){
+			let aa=$("#popup #id").val()
+			let bb=$("#popup #name").val()
+			let cc=$("#popup #phone").val()
+			let dd=$("#popup #like").val()
+			console.log(aa,bb,cc,dd)
+			let http = new XMLHttpRequest();
+			http.open("get",`http://192.168.43.232:8080/gai?id=${aa}&name=${bb}&phone=${cc}&hoby=${dd}`)
+			http.send();
+			http.onreadystatechange=function(){
+				if(http.readyState==4){
+                    console.log(http.responseText)
+					if(http.responseText=="success"){
+						alert("修改成功")
+						location.reload()
+					}else{
+						alert("修改失败")
+					}
+				}
+            }
+        })
+
+        $("#cancel").click(function(){
+        mask.style.display="none"
+    })
+    }
+    
+    
+        
+    // 修改信息
+    
+    </script>
