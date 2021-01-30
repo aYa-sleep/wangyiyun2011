@@ -42,24 +42,24 @@
     <div class="content">
         <div class="content_con">
             <div class="content_con_top">
-                <h2>首页
+                <h2><a href="http://192.168.43.232/wangyiyun2011/shouye.html">首页</a>
                     <p>>复联4英雄潮流舒适纯棉漫威logo卫衣</p>
                 </h2>
             </div>
             <div class="content_con_fang">
                 <div class="left">
                     <div class="tt">
-                        <img src="../wangyiyun2011/img/shangping/衣服big1.jpg" alt="" class="big">
+                        <img src="" alt="" class="big">
                         <div class="zhe"></div>
                         <div class="sbig">
-                            <img src="../wangyiyun2011/img/shangping/商品衣服big.jpg" alt="" class="sss">
+                            <img src="" alt="" class="sss">
                         </div>
                     </div>
                     <ul class="small">
-                        <li><img src="../wangyiyun2011/img/shangping/衣服big1.jpg" alt=""></li>
-                        <li><img src="../wangyiyun2011/img/shangping/222227.jpg" alt=""></li>
-                        <li><img src="../wangyiyun2011/img/shangping/2226.jpg" alt=""></li>
-                        <li><img src="../wangyiyun2011/img/shangping/111.jpg" alt=""></li>
+                        <li><img src="" alt="" id="one"></li>
+                        <li><img src="" alt="" id="two"></li>
+                        <li><img src="" alt="" id="three"></li>
+                        <li><img src="" alt="" id="four"></li>
                     </ul>
                 </div>
                 
@@ -192,30 +192,6 @@
                 <div class="rr">
                         <h2>热销商品</h2>
                         <ul>
-                            <!-- <li>
-                                <img src="../wangyiyun2011/img/shangping/32.jpg" alt="">
-                                <p>i19蓝牙5.0真无线耳机 光感入耳 记忆配对 无线充电 苹果安卓通用
-                                    <span>￥299</span>
-                                </p>
-                            </li>
-                            <li>
-                                <img src="../wangyiyun2011/img/shangping/12.jpg" alt="">
-                                <p>i19蓝牙5.0真无线耳机 光感入耳 记忆配对 无线充电 苹果安卓通用
-                                    <span>￥299</span>
-                                </p>
-                            </li>
-                            <li>
-                                <img src="../wangyiyun2011/img/shangping/14.jpg" alt="">
-                                <p>i19蓝牙5.0真无线耳机 光感入耳 记忆配对 无线充电 苹果安卓通用
-                                    <span>￥299</span>
-                                </p>
-                            </li>
-                            <li>
-                                <img src="../wangyiyun2011/img/shangping/16.jpg" alt="">
-                                <p>i19蓝牙5.0真无线耳机 光感入耳 记忆配对 无线充电 苹果安卓通用
-                                    <span>￥299</span>
-                                </p>
-                            </li> -->
                         </ul>
                 </div>
             </div>
@@ -274,24 +250,14 @@
     $.ajax({
             url:"http://192.168.43.232:8080/getGoods",
             success(data){
-                console.log(data)
+                // console.log(data)
                 let htmlStr="";
                 data.forEach(item=>{
-                    htmlStr +='<li><a href=""><img src="'+item.src+'" alt=""><p>'+item.name+'<span>'+item.price+'</span></p></a></li>'
+                    htmlStr +='<li><a href="http://192.168.43.232/wangyiyun2011/buy.html?id='+item.id+'"><img src="'+item.src+'" alt=""><p>'+item.name+'<span>'+item.price+'</span></p></a></li>'
                 })
                 $(".content_con_pro .rr ul").html(htmlStr);
             }
         })
-
-
-
-
-
-
-
-
-
-
 
     let big = document.querySelector(".content_con_fang .left .tt .big");
     let sbig = document.querySelector(".content_con_fang .left .sbig");
@@ -314,12 +280,12 @@
         }
         big.onmousemove=function(event){
 
-            console.log(document.querySelector(".content_con").offsetWidth)
+            // console.log(document.querySelector(".content_con").offsetWidth)
             let point={
                 x:event.offsetX,
                 y:event.offsetY,
             }//鼠标距离浏览窗口的距离
-            console.log(point.x,point.y)
+            // console.log(point.x,point.y)
             let n={
                 X:point.x/big.offsetWidth,
                 Y:point.y/big.offsetHeight,
@@ -335,8 +301,40 @@
                 zhe.style.top=point.y-zhe.offsetHeight/2+"px";
                 sss.style.top=-sss.offsetHeight*n.Y+sbig.offsetHeight/2+"px";
             }
-            console.log(zhe.style.left,)
+            // console.log(zhe.style.left,)
         }
         
     }
+
+
+
+
+    var atr =location.search;
+    var num = atr.split('=')[1];
+    console.log(num)
+    $.ajax({
+        url:"http://192.168.43.232:8080/xiangGoods?id"+num,
+        method:"get",
+        data:{
+            id:num,
+        },
+        success(data){
+            data.forEach(item=>{
+                console.log(item)
+                // console.log($(".content_con_fang .tt .big"))
+                console.log(document.querySelector(".content_con_fang .tt .big").src)
+                document.querySelector(".content_con_fang .tt .big").src=item.big;
+                document.querySelector(".content_con_fang .small #one").src=item.big;
+                document.querySelector(".content_con_fang .small #two").src=item.small2
+                document.querySelector(".content_con_fang .small #three").src=item.small3
+                document.querySelector(".content_con_fang .small #four").src=item.small4;
+                console.log(document.querySelector(".content_con_fang .right_top p").innerHTML)
+                document.querySelector(".content_con_fang .right_top h2").innerHTML=item.name
+                document.querySelector(".content_con_fang .right_zhong p").innerHTML=item.price
+            })
+        }
+    })
+
+
+
 </script>

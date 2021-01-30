@@ -138,7 +138,7 @@ a{
 }
 .content .content_con{
     width: 1100px;
-    height: 500px;
+    height: 300px;
     /* background-color: chocolate; */
 }
 .content .content_con .shang{
@@ -221,7 +221,7 @@ a{
 }
  /*...................选择商品..................*/
 
- .content .content_con .biao .second{
+ .content .content_con .biao .second,.biao .three{
      width: 1100px;
      height: 120px;
      /* background-color: darkmagenta; */
@@ -230,7 +230,7 @@ a{
     line-height: 120px;
  }
  
- .content_con .biao .second .productPic{
+ .content_con .biao .second .productPic,.three .productPic{
      width: 150px;
      height: 120px;
      /* background-color: darkseagreen; */
@@ -239,27 +239,27 @@ a{
      justify-content: space-evenly;
      align-items: center;
  }
- .content_con .biao .second .productPic .tu{
+ .content_con .biao .second .productPic .tu,.three .productPic .tu{
      width: 80px;
      height: 80px;
      background-color: rgb(230, 223, 230);
      /* background-color: darkslateblue; */
  }
- .content_con .biao .second .productPic img{
+ .content_con .biao .second .productPic img,.three .productPic img{
      width: 100%;
      height: 100%;
  }
- .content_con .biao .second .productName{
+ .content_con .biao .second .productName,.three .productName{
      width: 400px;
      height: 120px;
      /* background-color: deeppink; */
  }
- .content_con .biao .second .productPrice{
+ .content_con .biao .second .productPrice,.three .productPrice{
      width: 120px;
      height: 120px;
      /* background-color: goldenrod; */
  }
- .content_con .biao .second .productCount{
+ .content_con .biao .second .productCount,.three .productCount{
      width: 230px;
      height: 120px;
      /* background-color: green; */
@@ -268,7 +268,7 @@ a{
      align-items: center;
      justify-content: center;
  }
- .content_con .biao .second .productCount button{
+ .content_con .biao .second .productCount button,.three .productCount button{
      width: 60px;
      height: 30px;
      font-size: 20px;
@@ -276,13 +276,13 @@ a{
      background-color: white;
      border-radius: 5px;
  }
- .content_con .biao .second .productSum{
+ .content_con .biao .second .productSum,.three .productSum{
      width: 100px;
      height: 120px;
      /* background-color: hotpink; */
      text-align: center;
  }
- .content_con .biao .second #btn{
+ .content_con .biao .second #btn,.three #btn{
      width: 60px;
      height: 40px;
      margin-left: 20px;

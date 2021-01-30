@@ -166,7 +166,7 @@
                 console.log(data)
                 let htmlStr="";
                 data.forEach(item=>{
-                    htmlStr +='<li><a href=""><img src="'+item.src+'" alt=""><p>'+item.name+'<span>'+item.price+'</span></p></a></li>'
+                    htmlStr +='<li><a href="http://192.168.43.232/wangyiyun2011/buy.html?id='+item.id+'"><img src="'+item.src+'" alt=""><p>'+item.name+'<span>'+item.price+'</span></p></a></li>'
                 })
                 $(".content_first ul").html(htmlStr);
             }
@@ -177,7 +177,7 @@
             console.log(data)
             let addStr="";
             data.forEach(item=>{
-                addStr +='<li><a href=""><img src="'+item.src+'" alt=""><p>'+item.name+'<span>'+item.price+'</span></p></a></li>'
+                addStr +='<li><a href="http://192.168.43.232/wangyiyun2011/buy.html?id='+item.id+'"><img src="'+item.src+'" alt=""><p>'+item.name+'<span>'+item.price+'</span></p></a></li>'
                 })
             $(".content_three ul").html(addStr);
         }

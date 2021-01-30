@@ -72,34 +72,6 @@
                             <span class="r">119&nbsp;</span>免运费</p>
                     </li>
                     <li class="second">
-                        <div class="productPic">
-                            <input type="checkbox">
-                            <div class="tu">
-                                <img src="../wangyiyun2011/img/shangping/小图1).jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="productName">
-                            复联4英雄潮流舒适纯棉漫威logo卫衣
-                        </div>
-                        <div class="productPrice">
-                            ￥<span>299</span>
-                        </div>
-                        <div class="productCount">
-                                <button>-</button>
-                                &nbsp;&nbsp;
-                                <span>3</span>
-                                &nbsp;
-                                &nbsp;
-                                <button>+</button>
-                        </div>
-                        <div class="productSum">
-                            ￥<span>299</span>
-                        </div>
-                        <div class="del">
-                            <button id="btn">×</button>
-                        </div>
-                    </li>
-                    <li class="second">
                             <div class="productPic">
                                 <input type="checkbox">
                                 <div class="tu">
@@ -113,40 +85,12 @@
                                 ￥<span>299</span>
                             </div>
                             <div class="productCount">
-                                    <button>-</button>
+                                    <button id="jian">-</button>
                                     &nbsp;&nbsp;
-                                    <span>3</span>
+                                    <span>1</span>
                                     &nbsp;
                                     &nbsp;
-                                    <button>+</button>
-                            </div>
-                            <div class="productSum">
-                                ￥<span>299</span>
-                            </div>
-                            <div class="del">
-                                <button id="btn">×</button>
-                            </div>
-                    </li>
-                    <li class="second">
-                            <div class="productPic">
-                                <input type="checkbox">
-                                <div class="tu">
-                                    <img src="../wangyiyun2011/img/shangping/小图1).jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="productName">
-                                复联4英雄潮流舒适纯棉漫威logo卫衣
-                            </div>
-                            <div class="productPrice">
-                                ￥<span>299</span>
-                            </div>
-                            <div class="productCount">
-                                    <button>-</button>
-                                    &nbsp;&nbsp;
-                                    <span>3</span>
-                                    &nbsp;
-                                    &nbsp;
-                                    <button>+</button>
+                                    <button id="add">+</button>
                             </div>
                             <div class="productSum">
                                 ￥<span>299</span>
@@ -166,7 +110,7 @@
                             <p>已享受免运费&nbsp;<span>|</span></p>
                             <div>合计：
                                 <span>￥</span>
-                                <span>1190</span>
+                                <span id="price">229</span>
                             </div>
                             <button class="four">结&nbsp;算</button>
                         </div>
@@ -274,4 +218,47 @@
             $(".content_bottom ul").html(addStr);
         }
     })
+    $(".second .productCount #jian").click(function(){
+        let a =document.querySelector(".second .productCount span").innerHTML;
+        let p = document.querySelector(".second .productPrice span").innerHTML
+        if (parseInt(a) == "0") {
+                return;
+            }
+            $(".second .productCount span").html(a-1);
+            let s = document.querySelector(".second .productCount span").innerHTML;
+            $(".last .three div #price").html(parseInt(p) * parseInt(s))
+        console.log(a)
+    })
+    $(".second .productCount #add").click(function(){
+        let p = document.querySelector(".second .productPrice span").innerHTML;//价格
+        // console.log(p)
+        let c =document.querySelector(".second .productCount span").innerHTML;//数量
+        let s = $(".second .productCount span").html(parseInt(c)+1);//点击后的值
+        let d =document.querySelector(".second .productCount span").innerHTML;
+        console.log(d)
+        $(".last .three div #price").html(parseInt(p) * parseInt(d))
+    })
+
+
+    $(".three .productCount #jian").click(function(){
+        let a =document.querySelector(".three .productCount span").innerHTML;
+        let p = document.querySelector(".three .productPrice span").innerHTML
+        if (parseInt(a) == "0") {
+                return;
+            }
+            $(".three .productCount span").html(a-1);
+            let s = document.querySelector(".three .productCount span").innerHTML;
+            $(".last .three div #price").html(parseInt(p) * parseInt(s))
+        console.log(a)
+    })
+    $(".three .productCount #add").click(function(){
+        let p = document.querySelector(".three .productPrice span").innerHTML;//价格
+        // console.log(p)
+        let c =document.querySelector(".three .productCount span").innerHTML;//数量
+        let s = $(".three .productCount span").html(parseInt(c)+1);//点击后的值
+        let d =document.querySelector(".three .productCount span").innerHTML;
+        console.log(d)
+        $(".last .three div #price").html(parseInt(p) * parseInt(d))
+    })
+
 </script>
