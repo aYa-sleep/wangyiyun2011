@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>云音乐商城</title>
-    <link rel="stylesheet" href="../wangyiyun2011/css/css.css">
+    <link rel="stylesheet" href="../myProject/css/css.css">
     <link rel="stylesheet" href="download (1)/font_2189147_qef39i1s1f/iconfont.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
     <div class="header">
         <div class="header_con">
             <div class="header_con_left">
-                <div class="logo"><img src="../wangyiyun2011/img/portcut/favicon.jpg" alt=""></div>
+                <div class="logo"><img src="../myProject/img/portcut/favicon.jpg" alt=""></div>
                 <div class="zi">网易云音乐<span></span> 商城</div>
             </div>
             <div class="header_con_right">
@@ -22,8 +22,8 @@
                     "></span>
                     <input type="text" id="ipt" placeholder="H16 真无线">
                 </div>
-                <a href="http://192.168.43.232/wangyiyun2011/gouwuche.html"><div id="shop" class="iconfont icon-gouwuche"></div></a>
-                <a href="http://192.168.43.232/wangyiyun2011/content.html"><div class="person">个人中心</div></a>
+                <a href="http://192.168.43.232/wangyiyun2011/myProject/gouwuche.html"><div id="shop" class="iconfont icon-gouwuche"></div></a>
+                <a href="http://192.168.43.232/wangyiyun2011/myProject/content.html"><div class="person">个人中心</div></a>
             </div>
         </div>
     </div>
@@ -32,17 +32,17 @@
     <div class="lunbotu">
         <div class="lunbotu_con">
                 <ul class="ww">
-                    <li class="show"><img src="../wangyiyun2011/img/luobotu/luobo1.jpg" alt=""></li>
-                    <li><img src="../wangyiyun2011/img/luobotu/luobo2.jpg" alt=""></li>
-                    <li><img src="../wangyiyun2011/img/luobotu/luobo3.jpg" alt=""></li>
-                    <li><img src="../wangyiyun2011/img/luobotu/luobo4.jpg" alt=""></li>
-                    <li><img src="../wangyiyun2011/img/luobotu/luobo5.jpg" alt=""></li>
+                    <li class="show"><img src="../myProject/img/luobotu/luobo1.jpg" alt=""></li>
+                    <li><img src="../myProject/img/luobotu/luobo2.jpg" alt=""></li>
+                    <li><img src="../myProject/img/luobotu/luobo3.jpg" alt=""></li>
+                    <li><img src="../myProject/img/luobotu/luobo4.jpg" alt=""></li>
+                    <li><img src="../myProject/img/luobotu/luobo5.jpg" alt=""></li>
                 </ul>
                 <i id="ll">
-                    <img src="../wangyiyun2011/img/shiliangtu/l.png" alt="" id="left">
+                    <img src="../myProject/img/shiliangtu/l.png" alt="" id="left">
                 </i>
                 <i id="rr">
-                    <img src="../wangyiyun2011/img/shiliangtu/r.png" alt="" id="right">
+                    <img src="../myProject/img/shiliangtu/r.png" alt="" id="right">
                 </i>
                 <ol class="dot"></ol>
             <!-- </div> -->
@@ -56,19 +56,19 @@
             <div class="content_con_top">
                 <ul class="ul">
                     <li>
-                        <a href="http://192.168.43.232/wangyiyun2011/liebiao.html"><img src="../wangyiyun2011/img/shiliangtu/hot.jpg" alt="">
+                        <a href="http://192.168.43.232/myProject/liebiao.html"><img src="../myProject/img/shiliangtu/hot.jpg" alt="">
                         <p>热销爆品</p><span></span></a>
                     </li>
                     <li>
-                        <a href="http://192.168.43.232/wangyiyun2011/liebiao.html"><img src="../wangyiyun2011/img/shiliangtu/bao.jpg" alt="">
+                        <a href="http://192.168.43.232/myProject/liebiao.html"><img src="../myProject/img/shiliangtu/bao.jpg" alt="">
                         IP周边<span></span></a>
                     </li>
                     <li>
-                        <a href="http://192.168.43.232/wangyiyun2011/liebiao.html"><img src="../wangyiyun2011/img/shiliangtu/erji.jpg" alt="">
+                        <a href="http://192.168.43.232/myProject/liebiao.html"><img src="../myProject/img/shiliangtu/erji.jpg" alt="">
                         数码影音<span></span></a>
                     </li>
                     <li>
-                        <a href="http://192.168.43.232/wangyiyun2011/liebiao.html"><img src="../wangyiyun2011/img/portcut/jifen.png" alt="">
+                        <a href="http://192.168.43.232/myProject/liebiao.html"><img src="../myProject/img/portcut/jifen.png" alt="">
                         云贝商城</a>
                    </li>
                 </ul>
@@ -79,8 +79,8 @@
 
             <div class="content_zhong">
                 <ul>
-                    <li><img src="../wangyiyun2011/img/portcut/亲爱的，晚安吧.jpg" alt=""></li>
-                    <li><img src="../wangyiyun2011/img/portcut/有音乐正青春.jpg" alt=""></li>
+                    <li><img src="../myProject/img/portcut/亲爱的，晚安吧.jpg" alt=""></li>
+                    <li><img src="../myProject/img/portcut/有音乐正青春.jpg" alt=""></li>
                 </ul>
             </div>
 
@@ -149,27 +149,27 @@
         </div>
 </body>
 </html>
-<script src="../wangyiyun2011/js/jquery.min.js"></script>
+<script src="../myProject/js/jquery.min.js"></script>
 <script>
     // 获取商品信息
     $.ajax({
-            url:"http://192.168.43.232:8080/getGoods",
+            url:"http://192.168.43.232:9000/getGoods",
             success(data){
                 console.log(data)
                 let htmlStr="";
                 data.forEach(item=>{
-                    htmlStr +='<li><a href="http://192.168.43.232/wangyiyun2011/buy.html?id='+item.id+'"><img src="'+item.src+'" alt=""><p>'+item.name+'<span>'+item.price+'</span></p></a></li>'
+                    htmlStr +='<li><a href="http://192.168.43.232/wangyiyun2011/myProject/buy.html?id='+item.id+'"><img src="'+item.src+'" alt=""><p>'+item.name+'<span>'+item.price+'</span></p></a></li>'
                 })
                 $(".content_first ul").html(htmlStr);
             }
         })
     $.ajax({
-        url:"http://192.168.43.232:8080/addGoods",
+        url:"http://192.168.43.232:9000/addGoods",
         success(data){
             console.log(data)
             let addStr="";
             data.forEach(item=>{
-                addStr +='<li><a href="http://192.168.43.232/wangyiyun2011/buy.html?id='+item.id+'"><img src="'+item.src+'" alt=""><p>'+item.name+'<span>'+item.price+'</span></p></a></li>'
+                addStr +='<li><a href="http://192.168.43.232/myProject/buy.html?id='+item.id+'"><img src="'+item.src+'" alt=""><p>'+item.name+'<span>'+item.price+'</span></p></a></li>'
                 })
             $(".content_three ul").html(addStr);
         }

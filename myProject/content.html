@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>个人中心</title>
-    <link rel="stylesheet" href="../wangyiyun2011/css/content.css">
+    <link rel="stylesheet" href="../myProject/css/content.css">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
     <div class="main">
         <div class="main_con">
             <h2>个人中心</h2>
-            <span><a href="http://192.168.43.232/wangyiyun2011/shouye.html">首页></a></span>
+            <span><a href="http://192.168.43.232/wangyiyun2011/myProject/shouye.html">首页></a></span>
         </div>
     </div>
     <!-- 内容 -->
@@ -179,7 +179,7 @@
 </div>
 </body>
 </html>
-<script src="../wangyiyun2011/js/jquery.min.js"></script>
+<script src="../myProject/js/jquery.min.js"></script>
 <script>
         var liList = document.querySelectorAll(".left li");
         console.log(liList)
@@ -221,7 +221,7 @@
         }
         //获取信息
         $.ajax({
-        url:"http://192.168.43.232:8080/xinxi",
+        url:"http://192.168.43.232:9000/xinxi",
         success(data){
             console.log(data)
             data.forEach(item=>{
@@ -247,7 +247,7 @@
 			let dd=$("#popup #like").val()
 			console.log(aa,bb,cc,dd)
 			let http = new XMLHttpRequest();
-			http.open("get",`http://192.168.43.232:8080/gai?id=${aa}&name=${bb}&phone=${cc}&hoby=${dd}`)
+			http.open("get",`http://192.168.43.232:9000/gai?id=${aa}&name=${bb}&phone=${cc}&hoby=${dd}`)
 			http.send();
 			http.onreadystatechange=function(){
 				if(http.readyState==4){

@@ -84,13 +84,13 @@
 
     $("#submit").click(function(){
         let http=new XMLHttpRequest()
-        http.open("get",`http://192.168.43.232:8080/add?username=${$("#username").val()}&password=${$("#password").val()}`);
+        http.open("get",`http://192.168.43.232:9000/add?username=${$("#username").val()}&password=${$("#password").val()}`);
         http.send();
         http.onreadystatechange=function(){
             if(http.readyState==4){
                     if(http.responseText=="success"){
                         alert("注册成功");
-                        location.href="http://192.168.43.232/wangyiyun2011/login.html"
+                        location.href="http://192.168.43.232/wangyiyun2011/myProject/login.html"
                     }
                     else{
                         alert("注册失败");

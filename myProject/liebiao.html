@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>商品列表</title>
-    <link rel="stylesheet" href="../wangyiyun2011/css/liebiao.css">
+    <link rel="stylesheet" href="../myProject/css/liebiao.css">
     <link rel="stylesheet" href="download (1)/font_2189147_qef39i1s1f/iconfont.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
    <div class="header">
     <div class="header_con">
         <div class="header_con_left">
-            <div class="logo"><img src="../wangyiyun2011/img/portcut/favicon.jpg" alt=""></div>
+            <div class="logo"><img src="../myProject/img/portcut/favicon.jpg" alt=""></div>
             <div class="zi">网易云音乐<span></span> 商城</div>
         </div>
         <div class="header_con_right">
@@ -22,8 +22,8 @@
                 "></span>
                 <input type="text" id="ipt" placeholder="H16 真无线">
             </div>
-            <a href="http://192.168.43.232/wangyiyun2011/gouwuche.html"><div id="shop" class="iconfont icon-gouwuche"></div></a>
-            <a href="http://192.168.43.232/wangyiyun2011/content.html"><div class="person">个人中心</div></a>
+            <a href="http://192.168.43.232/wangyiyun2011/myProject/gouwuche.html"><div id="shop" class="iconfont icon-gouwuche"></div></a>
+            <a href="http://192.168.43.232/wangyiyun2011/myProject/content.html"><div class="person">个人中心</div></a>
         </div>
     </div>
 </div>
@@ -31,7 +31,7 @@
 
 <div class="content">
     <div class="content-top">
-        <a href="http://192.168.43.232/wangyiyun2011/shouye.html">首页</a>
+        <a href="http://192.168.43.232/wangyiyun2011/myProject/shouye.html">首页</a>
         <p>&gt;&nbsp;&nbsp;数码影音</p>
     </div>
     <div class="content-nav">
@@ -135,10 +135,10 @@
     </div>
 </body>
 </html>
-<script src="../wangyiyun2011/js/jquery.min.js"></script>
+<script src="../myProject/js/jquery.min.js"></script>
 <script>
     $.ajax({
-        url:"http://192.168.43.232:8080/lieGoods",
+        url:"http://192.168.43.232:9000/lieGoods",
         success(data){
             console.log(data)
             let addStr="";

@@ -134,7 +134,7 @@
         </div>
         <div class="bu">
             <button id="login">登录</button>
-            <a href="http://192.168.43.232/wangyiyun2011/submit.html"><button id="submit">去注册</button></a>
+            <a href="http://192.168.43.232/wangyiyun2011/myProject/submit.html"><button id="submit">去注册</button></a>
         </div>
         
     </div>
@@ -180,13 +180,13 @@
         }
 
         let http = new XMLHttpRequest();
-        http.open("get",`http://192.168.43.232:8080/login?username=${$("#username").val()}&password=${$("#password").val()}`);
+        http.open("get",`http://192.168.43.232:9000/login?username=${$("#username").val()}&password=${$("#password").val()}`);
         http.send();
         http.onreadystatechange=function(){
             if(http.readyState===4){
                 if(http.responseText=="success"){
                     alert("登录成功")
-                    location.href="http://192.168.43.232/wangyiyun2011/shouye.html"
+                    location.href="http://192.168.43.232/wangyiyun2011/myProject/shouye.html"
                 }else{
                     alert("登录失败")
                 }
