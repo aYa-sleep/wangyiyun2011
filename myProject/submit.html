@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户注册</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .wrap{
+            width: 400px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid black;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgb(194, 36, 9);
+            margin-bottom: 10px;
+        }
+        p{
+            padding: 10px 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+        button{
+            margin-top: 10px;
+            width: 100px;
+            height: 25px;
+            background-color: rgb(194, 36, 9);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2>用户注册</h2>
+        <p>
+            用户名：
+            <input type="text" id="username">
+        </p>
+        <p>
+            密&nbsp;&nbsp;&nbsp;码：
+            <input type="password" id="password">
+        </p>
+        <button id="submit">注册</button>
+    </div>
+</body>
+</html>
+<script src="jquery.min.js"></script>
+<script>
+
+    //焦点验证
+        var userName = $("#username")
+        var userPwd = $("#password")
+        var flagName = null;
+        var flagPwd = null;
+
+        userName.blur(function(){
+            var str = this.value;
+            var regName = /^[\u4e00-\u9fa5]{2,4}$/;
+            if (regName.test(str)) {
+                flagName = true;
+            } else {
+                alert("姓名不合法");
+                flagName = false;
+            }
+        })
+            
+        userPwd.blur(function(){
+            var str = this.value;
+            var regPassword = /^[A-z]|\d|[!@#$%^&*]{6}$/
+            if (regPassword.test(str)) {
+                flagPwd = true;
+            } else {
+                alert("密码不合法");
+                flagPwd = false;
+            }
+        })
+
+    $("#submit").click(function(){
+        let http=new XMLHttpRequest()
+        http.open("get",`http://192.168.43.232:8080/add?username=${$("#username").val()}&password=${$("#password").val()}`);
+        http.send();
+        http.onreadystatechange=function(){
+            if(http.readyState==4){
+                    if(http.responseText=="success"){
+                        alert("注册成功");
+                        location.href="http://192.168.43.232/wangyiyun2011/login.html"
+                    }
+                    else{
+                        alert("注册失败");
+                    }
+                }   
+            }
+    })
+</script>
